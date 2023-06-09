@@ -73,6 +73,10 @@
 
                             </tbody>
                         </table>
+                        <form method="POST" action="GenerarReporte.jsp" target="_blank">
+                            <input class="btn btn-danger" type="submit" value="Generar PDF">
+                            <input type="hidden"  name="reportName" value="Clientes"> 
+                        </form>  
                     </div>
                 </div>
             </div>

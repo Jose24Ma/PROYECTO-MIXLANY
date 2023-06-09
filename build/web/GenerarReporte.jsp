@@ -22,18 +22,26 @@
     </head>
     <body>
         <%
-            File reporte = new File(application.getRealPath("Productos.jasper"));
-            Map<String, Object> parametros = new HashMap<String, Object>();
-            Conexion conexion = new Conexion();
-            Connection objetoConexion = conexion.obtenerConexion();
-            byte[] bytes = JasperRunManager.runReportToPdf(reporte.getPath(), parametros, objetoConexion);
-            response.setContentType("application/pdf");
-            response.setContentLength(bytes.length);
-            response.setHeader("Content-Disposition", "attachment; filename=\"Listado Productos.pdf\";");
-            ServletOutputStream salida = response.getOutputStream();
-            salida.write(bytes, 0, bytes.length);
-            salida.flush();
-            salida.close();
+            String reportName = request.getParameter("reportName");
+
+            if (reportName != null && !reportName.isEmpty()) {
+
+                String jaspFilePath = application.getRealPath("REPORTES/" + reportName + ".jasper");
+                File reporte = new File(jaspFilePath);
+                Map<String, Object> parametros = new HashMap<String, Object>();
+                Conexion conexion = new Conexion();
+                Connection objetoConexion = conexion.obtenerConexion();
+                byte[] bytes = JasperRunManager.runReportToPdf(reporte.getPath(), parametros, objetoConexion);
+                response.setContentType("application/pdf");
+                response.setContentLength(bytes.length);
+                response.setHeader("Content-Disposition", "attachment; filename=\"Listado.pdf\";");
+                ServletOutputStream salida = response.getOutputStream();
+                salida.write(bytes, 0, bytes.length);
+                salida.flush();
+                salida.close();
+            } else {
+            }
+
         %>  
     </body>
 </html>

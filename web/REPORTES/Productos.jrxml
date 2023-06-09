@@ -33,8 +33,8 @@ FROM
 				<text><![CDATA[Lista de Productos]]></text>
 			</staticText>
 			<image>
-				<reportElement x="0" y="0" width="159" height="82" uuid="fd153813-b7e5-4c8c-9c31-204d3c409cfb"/>
-				<imageExpression><![CDATA["C:\\Users\\MI\\Documents\\NetBeansProjects\\Mixlany\\web\\img\\logo.png"]]></imageExpression>
+				<reportElement x="0" y="5" width="148" height="58" uuid="c9dfbc00-eea0-4452-af4d-e2e03c882bd4"/>
+				<imageExpression><![CDATA["C:\\Users\\APRENDIZ\\Desktop\\Nueva carpeta\\Mixlany\\web\\img\\logo.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>

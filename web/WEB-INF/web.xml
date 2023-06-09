@@ -28,7 +28,7 @@
         <servlet-name>ControladorVentas</servlet-name>
         <servlet-class>Controlador.ControladorVentas</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>ControladorCompras</servlet-name>
         <servlet-class>Controlador.ControladorCompras</servlet-class>
     </servlet>
@@ -69,4 +69,20 @@
             30
         </session-timeout>
     </session-config>
+    <context-param>
+        <param-name>servidor</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>puerto</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>usuario</param-name>
+        <param-value>jmmanjarrez9@misena.edu.co</param-value>
+    </context-param>
+    <context-param>
+        <param-name>clave</param-name>
+        <param-value>hphdzhreppsmbehp</param-value>
+    </context-param>
 </web-app>

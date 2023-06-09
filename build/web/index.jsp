@@ -25,6 +25,7 @@
                             <input type="password" name="txtpass" class="form-control">
                         </div>
                         <input type="submit" name="accion" value="Ingresar" class="btn btn-primary btn-block">
+                        <br><a href="Correo.jsp">Contactanos</a>
                         <br/>
                         <% if(request.getAttribute("Error") != null){
                             out.println("<center><span class='bg-danger' style='font-weight: 900; padding: 10px;'>");

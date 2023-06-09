@@ -68,6 +68,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <input type=\"password\" name=\"txtpass\" class=\"form-control\">\n");
       out.write("                        </div>\n");
       out.write("                        <input type=\"submit\" name=\"accion\" value=\"Ingresar\" class=\"btn btn-primary btn-block\">\n");
+      out.write("                        <a href=\"URL\">Contactanos</a>\n");
       out.write("                        <br/>\n");
       out.write("                        ");
  if(request.getAttribute("Error") != null){
